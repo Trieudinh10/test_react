@@ -1,7 +1,5 @@
-import axios from "axios"
-const handleLogin = (email, password) => {
-    return axios.post('/api/login')
+import axios from "../axios"
+const handleLoginApi = (email, password) => {
+    return axios.post('/api/login', {email, password})
 }
-module.exports = {
-    handleLogin
-}
+export  { handleLoginApi }
